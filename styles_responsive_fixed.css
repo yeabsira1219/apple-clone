@@ -1,0 +1,494 @@
+/* =========================
+   Simple Apple-like base
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    background: #fff;
+    color: #1d1d1f;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Keeps content centered like Apple */
+.internal-wrapper,
+.footer-content {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 22px;
+}
+
+/* =========================
+   Header
+   ========================= */
+.header-wrapper {
+    background: rgba(255, 255, 255, 0.86);
+    color: #1d1d1f;
+    font-size: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-wrapper ul {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-wrapper .header-links-wrapper ul li {
+    opacity: 0.8;
+}
+
+.header-wrapper .header-links-wrapper ul li:hover {
+    opacity: 1;
+}
+
+.header-wrapper .header-links-wrapper ul li a {
+    text-decoration: none;
+    color: #1d1d1f;
+}
+
+.logo-link,
+.search-link,
+.cart-link {
+    width: 17px;
+}
+
+/* =========================
+   Links/buttons
+   ========================= */
+.links-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    margin-top: 16px;
+}
+
+.links-wrapper a {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 21px;
+    line-height: 1.2;
+}
+
+.links-wrapper a:hover {
+    text-decoration: underline;
+}
+
+.links-wrapper a::after {
+    content: " ›";
+}
+
+.left-side-wrapper .links-wrapper,
+.right-side-wrapper .links-wrapper {
+    margin-top: 12px;
+    gap: 24px;
+}
+
+.left-side-wrapper .links-wrapper a,
+.right-side-wrapper .links-wrapper a {
+    font-size: 17px;
+}
+
+/* =========================
+   Big hero sections
+   ========================= */
+.main-highlight-wrapper,
+.second-highlight-wrapper,
+.third-highlight-wrapper {
+    min-height: 580px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    padding-top: 52px;
+    margin-bottom: 12px;
+}
+
+.main-highlight-wrapper {
+    background-image: url('./images/homes/hero_iphone_family__be5jkzxszb1e_largetall_2x.jpg');
+    background-color: #fff;
+}
+
+.second-highlight-wrapper {
+    background-image: url('./images/homes/hero_fd26__c9vr0hxu24eq_largetall_2x.jpg');
+    background-color: #fff;
+}
+
+.third-highlight-wrapper {
+    background-image: url('./images/homes/hero_college_students_2026__dzrtx52rt9aq_largetall_2x.jpg');
+    background-color: #fff;
+}
+
+.title-wrapper {
+    font-size: 56px;
+    line-height: 1.07;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+}
+
+.description-wrapper,
+.product-description,
+.product-description-wrapper {
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-top: 6px;
+}
+
+/* =========================
+   Two-column promo sections
+   This behaves like Bootstrap col-12 col-md-6:
+   mobile = 1 column, tablet/desktop = 2 columns
+   ========================= */
+.fourth-highlight-wrapper,
+.fifth-highlight-wrapper,
+.sixth-highlight-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 0 12px 12px;
+}
+
+.left-side-wrapper,
+.right-side-wrapper {
+    min-height: 560px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    padding-top: 45px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.left-side-wrapper .title-wrapper,
+.right-side-wrapper .title-wrapper {
+    font-size: 40px;
+    line-height: 1.1;
+}
+
+.left-side-wrapper .product-description,
+.right-side-wrapper .product-description,
+.left-side-wrapper .product-description-wrapper,
+.right-side-wrapper .product-description-wrapper {
+    font-size: 21px;
+    line-height: 1.25;
+}
+
+.product-description-limitation {
+    font-size: 14px;
+    color: #6e6e73;
+    margin-top: 6px;
+}
+
+.logo-wrapper img {
+    max-height: 42px;
+    width: auto;
+    margin: 0 auto 8px;
+}
+
+.fourth-highlight-wrapper .left-side-wrapper {
+    background-image: url('./images/homes/promo_macbook_air_m5__e5xk2yysqiie_large_2x.jpg');
+}
+
+.fourth-highlight-wrapper .right-side-wrapper {
+    background-image: url('./images/homes/promo_ipad_air_m4__bgcv7t286k8y_large_2x.jpg');
+}
+
+.fifth-highlight-wrapper .left-side-wrapper {
+    background-image: url('./images/homes/promo_macbook_pro__c9td9w1mc8ia_large_2x.jpg');
+    background-color: #000;
+    color: #fff;
+}
+
+.fifth-highlight-wrapper .right-side-wrapper {
+    background-image: url('./images/homes/promo_apple_watch_series_11__gnlwqxe1jlu2_large_2x.jpg');
+}
+
+.sixth-highlight-wrapper .left-side-wrapper {
+    background-image: url('./images/homes/promo_iphone_tradein__e4hrjxmgmf0i_large_2x.jpg');
+}
+
+.sixth-highlight-wrapper .right-side-wrapper {
+    background-image: url('./images/homes/promo_apple_card_airpods__dpbuw4e90126_large_2x.jpg');
+}
+
+/* =========================
+   Footer
+   ========================= */
+.footer-wrapper {
+    background: #f5f5f7;
+    color: #6e6e73;
+    font-size: 12px;
+    line-height: 1.333;
+}
+
+.upper-text-container {
+    border-bottom: 1px solid #d2d2d7;
+    padding: 17px 0 11px;
+}
+
+.upper-text-container p {
+    margin: 0 0 10px;
+}
+
+.footer-links-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 24px;
+    padding: 20px 0 10px;
+}
+
+.footer-links-wrapper h3 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 0 0 9px;
+}
+
+.footer-links-wrapper ul {
+    list-style: none;
+    margin: 0 0 22px;
+    padding: 0;
+}
+
+.footer-links-wrapper ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links-wrapper a,
+.my-apple-wrapper a,
+.terms-wrapper a,
+.country-wrapper a {
+    text-decoration: none;
+    color: #424245;
+}
+
+.footer-links-wrapper a:hover,
+.my-apple-wrapper a:hover,
+.terms-wrapper a:hover,
+.country-wrapper a:hover {
+    text-decoration: underline;
+}
+
+.my-apple-wrapper {
+    border-bottom: 1px solid #d2d2d7;
+    padding-bottom: 10px;
+    margin-bottom: 8px;
+}
+
+.copyright-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    padding: 8px 0 20px;
+}
+
+.terms-wrapper ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.terms-wrapper ul li {
+    padding: 0 9px;
+    border-right: 1px solid #d2d2d7;
+}
+
+.terms-wrapper ul li:first-child {
+    padding-left: 0;
+}
+
+.terms-wrapper ul li:last-child {
+    border-right: none;
+}
+
+.country-wrapper {
+    margin-left: auto;
+}
+
+/* =========================
+   Extra large screens
+   ========================= */
+@media (min-width: 1440px) {
+    .main-highlight-wrapper,
+    .second-highlight-wrapper,
+    .third-highlight-wrapper {
+        min-height: 650px;
+    }
+
+    .left-side-wrapper,
+    .right-side-wrapper {
+        min-height: 590px;
+    }
+}
+
+/* =========================
+   Medium screens/tablets
+   ========================= */
+@media (max-width: 1068px) {
+    .main-highlight-wrapper,
+    .second-highlight-wrapper,
+    .third-highlight-wrapper {
+        min-height: 540px;
+        padding-top: 45px;
+    }
+
+    .title-wrapper {
+        font-size: 48px;
+    }
+
+    .description-wrapper,
+    .product-description,
+    .product-description-wrapper {
+        font-size: 24px;
+    }
+
+    .left-side-wrapper,
+    .right-side-wrapper {
+        min-height: 500px;
+    }
+
+    .left-side-wrapper .title-wrapper,
+    .right-side-wrapper .title-wrapper {
+        font-size: 34px;
+    }
+
+    .footer-links-wrapper {
+        column-gap: 18px;
+    }
+}
+
+/* =========================
+   Small screens/phones
+   ========================= */
+@media (max-width: 767px) {
+    .internal-wrapper,
+    .footer-content {
+        padding: 0 16px;
+    }
+
+    /* Simple mobile header: hide long text links */
+    .header-wrapper .header-links-wrapper ul li:not(.logo-link):not(.search-link):not(.cart-link) {
+        display: none;
+    }
+
+    .header-wrapper ul {
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .logo-link {
+        margin-right: auto;
+    }
+
+    .main-highlight-wrapper,
+    .second-highlight-wrapper,
+    .third-highlight-wrapper {
+        min-height: 500px;
+        padding-top: 38px;
+        background-size: auto 72%;
+        background-position: center bottom;
+    }
+
+    .title-wrapper {
+        font-size: 38px;
+        line-height: 1.1;
+    }
+
+    .description-wrapper,
+    .product-description,
+    .product-description-wrapper {
+        font-size: 20px;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .links-wrapper {
+        gap: 22px;
+        margin-top: 14px;
+    }
+
+    .links-wrapper a {
+        font-size: 17px;
+    }
+
+    .fourth-highlight-wrapper,
+    .fifth-highlight-wrapper,
+    .sixth-highlight-wrapper {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin: 0 0 12px;
+    }
+
+    .left-side-wrapper,
+    .right-side-wrapper {
+        min-height: 500px;
+        padding-top: 36px;
+        background-size: auto 70%;
+        background-position: center bottom;
+    }
+
+    .left-side-wrapper .title-wrapper,
+    .right-side-wrapper .title-wrapper {
+        font-size: 32px;
+    }
+
+    .left-side-wrapper .product-description,
+    .right-side-wrapper .product-description,
+    .left-side-wrapper .product-description-wrapper,
+    .right-side-wrapper .product-description-wrapper {
+        font-size: 19px;
+    }
+
+    .footer-links-wrapper {
+        display: block;
+        padding-top: 8px;
+    }
+
+    .footer-links-wrapper h3 {
+        border-top: 1px solid #d2d2d7;
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    .footer-links-wrapper ul {
+        margin-bottom: 12px;
+        padding-left: 14px;
+    }
+
+    .copyright-wrapper {
+        display: block;
+        padding-bottom: 24px;
+    }
+
+    .copyright,
+    .terms-wrapper,
+    .country-wrapper {
+        margin-bottom: 8px;
+    }
+
+    .country-wrapper {
+        margin-left: 0;
+    }
+}
